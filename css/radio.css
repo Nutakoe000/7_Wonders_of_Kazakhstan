@@ -1,0 +1,32 @@
+
+.radio-btn {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 22;
+} 
+
+.radio-btn:hover {
+    transform: scale(1.1);
+}
+
+.radio-btn:active {
+    transform: scale(0.95);
+}
+
+/* Кнопка плэй */
+.radio-btn.play {
+    width: 2%;
+    height: 2%;
+    left: 24.5%;
+    top: 76%;
+}
+
+/* Кнопка переключения треков */
+.radio-btn.muz-list {
+    width: 3%;
+    height: 1%;
+    left: 27.3%;
+    top: 75.8%;
+    border-radius: 50%;
+}

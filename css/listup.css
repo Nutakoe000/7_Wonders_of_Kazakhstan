@@ -1,0 +1,85 @@
+/* Контейнер всплывающего окна aka листочка */
+.popup-container {
+    position: fixed;
+    top: 15%;
+    left: 35%;
+    /* max-width: 500px;
+    min-height: 400px; */
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-container.popup-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Бумажный лист */
+.popup-paper {
+    background-image: url('../images/page-out.png');
+    background-position-y: -40px ;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    padding: 15px;
+    transform: translateY(100vh);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    word-spacing: normal;
+    box-shadow:
+    1em 10px 10px rgba(78, 62, 52, 0.5),
+    -2em 0 0.4em rgba(0, 0, 0, 0.619);
+}
+
+.popup-visible .popup-paper {
+    transform: translateY(0);
+}
+
+/* Кнопка закрытия */
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.popup-close:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Контент всплывающего окна */
+.popup-content {
+    color: #2c1810;
+    font-family: 'titleN', Arial, sans-serif;
+}
+
+.popup-content h2 {
+    font-family: 'titleB', Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1a0d05;
+    text-align: center;
+}
+
+.popup-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #3d2817;
+}

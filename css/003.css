@@ -1,0 +1,302 @@
+body {
+    background-color: #0d0d0d;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.room {
+    position: relative;
+    width: 100%;
+    min-height: 140vh;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
+}
+
+.window-wrapper {
+    position: relative;
+    width: 80%;
+    top: 2px;
+    aspect-ratio: 100 / 70;
+    margin: -100px auto;
+    z-index: 3;
+    
+    /* ОПТИМИЗАЦИЯ */
+    transform-origin: center top;
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.window-wrapper.medium {
+    /* Мас: 60% / 80% = 0.75 */
+    transform: scale(0.75) translateY(200px);
+}
+
+.window-wrapper.small {
+    /* Мас: 40% / 80% = 0.5 */
+    transform: scale(0.5) translateY(690px);
+}
+
+.window {
+    position: absolute;
+    left: -28%;
+    top: 0%;
+    width: 150%;
+    height: 100%;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.windows-cont {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    width: 84%;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sky-l {
+    z-index: 6;
+}
+
+.sky {
+    width: 300%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, white 1px, transparent 1px),
+        radial-gradient(circle at 60% 10%, white 2px, transparent 2px),
+        radial-gradient(circle at 80% 60%, white 1px, transparent 1px),
+        radial-gradient(circle at 30% 80%, white 1px, transparent 1px),
+        radial-gradient(circle at 90% 40%, white 1px, transparent 1px),
+        radial-gradient(circle at 15% 50%, white 2px, transparent 2px),
+        radial-gradient(circle at 45% 25%, white 1px, transparent 1px),
+        radial-gradient(circle at 70% 75%, white 1px, transparent 1px),
+        radial-gradient(circle at 10% 15%, white 1px, transparent 1px),
+        radial-gradient(circle at 5% 20%, white 2px, transparent 2px),
+        radial-gradient(circle at 40% 90%, white 1px, transparent 1px),
+        radial-gradient(circle at 55% 45%, white 1px, transparent 1px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: twinkle 3s ease-in-out infinite;
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.moon-l {
+    z-index: 6;
+}
+
+.moon {
+    position: absolute;
+    top: -30%;
+    right: 20%;
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    animation: float 3s ease-in-out infinite;
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.clouds-l {
+    z-index: 9;
+}
+
+.cloud {
+    position: absolute;
+    opacity: 0.9;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.cloud1 {
+    top: -7%;
+    width: 50%;
+    height: auto;
+    opacity: 0.5;
+    animation: cloud-move 55s linear infinite 0s, cloud-float 5s ease-in-out infinite;
+}
+.cloud2 {
+    top: -5%;
+    width: 45%;
+    height: auto;
+    opacity: 0.8;
+    animation: cloud-move 40s linear infinite 0s, cloud-float 6s ease-in-out infinite;
+}
+.cloud3 {
+    top: -4%;
+    width: 47%;
+    height: auto;
+    opacity: 0.5;
+    animation: cloud-move 30s linear infinite 0s, cloud-float 5.5s ease-in-out infinite;
+}
+.cloud4 {
+    top: 6%;
+    width: 57%;
+    height: auto;
+    opacity: 1.1;
+    animation: cloud-move 20s linear infinite 0s, cloud-float 5.5s ease-in-out infinite;
+}
+.cloud5 {
+    top: 3%;
+    width: 53%;
+    height: auto;
+    opacity: 8.5;
+    animation: cloud-move 23s linear infinite 0s, cloud-float 6s ease-in-out infinite;
+}
+.cloud6 {
+    top: -4%;
+    width: 55%;
+    height: auto;
+    opacity: 0.5;
+    animation: cloud-move 35s linear infinite 0s, cloud-float 6s ease-in-out infinite;
+}
+.cloud7 {
+    top: -4%;
+    width: 55%;
+    height: auto;
+    opacity: 0.5;
+    animation: cloud-move 45s linear infinite 0s, cloud-float 6s ease-in-out infinite;
+}
+.cloud8 {
+    top: 10%;
+    width: 65%;
+    height: auto;
+    opacity: 10;
+    animation: cloud-move 15s linear infinite 0s, cloud-float 6s ease-in-out infinite;
+}
+
+.tree-l {
+    z-index: 12;
+}
+
+.tree {
+    position: absolute;
+    left: -120%;
+    top: 10%;
+    width: 300%;
+    height: 250%;
+    animation: treeANIM 7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    
+    transform-origin: center top;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tree.medium {
+    top: -13%;
+}
+
+.tree.small {
+top: -20%;
+}
+
+.table-cont {
+    position: relative;
+    width: 230%;
+    right: 67%;
+    bottom: 20%;
+    z-index: 20;
+}
+
+.table {
+    position: absolute;
+    width: 100%; /* обрезается окном, если трогаю */
+}
+
+.table-staff{
+    position: absolute;
+    width: 100%;
+    z-index: 21;
+}
+
+.radio-l {
+    width: 100%;
+}
+
+.radio {
+    width: 100%;
+}
+
+.book-png {
+    position: absolute;
+    width: 100%;
+}
+
+.book {
+    position: absolute;
+    width: 100%;
+}
+
+.book-link {
+    position: absolute;
+    width: 9%;
+    height: 18%;
+    top: 70%;
+    left: 46.5%;
+}
+
+@keyframes float {
+    0%   { transf5orm: translateY(0px) translateZ(0); }
+    50%  { transform: translateY(-10px) translateZ(0); }
+    100% { transform: translateY(0px) translateZ(0); }
+}
+
+@keyframes cloud-move {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes cloud-float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes treeANIM {
+    0%, 100% { transform: rotate(0deg) translateZ(0); }
+    35%  { transform: rotate(2deg) translateZ(0); }
+    65% { transform: rotate(-2deg) translateZ(0); }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}

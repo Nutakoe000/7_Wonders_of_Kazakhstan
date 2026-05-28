@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Wonders-of-Kazakhstan: details</title>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/003.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/book.css">
+    <link rel="stylesheet" href="../css/listup.css">
+</head>
+<body class="details">
+    <header> 
+        <nav>
+            <a href="../index.html"> Главная </a>
+            <a href="list.html"> Чудо-Список </a>
+            <a class="active" href="detals.html"> Чудо-Информация </a>
+        </nav>
+        <button id="button-planer">
+            <img src="../images/planer.png" alt="самолётик" class="planer">
+        </button>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+            <h3> Все чудеса </h3>
+                <details>
+                    <summary> Аккум-Калкан </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Чарынский каньон </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Кольсайские озёра </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Озеро Каинды </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Урочище Бектау-Ата </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Шайтанколь </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Урочие Босжира </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+            </ul>
+        </nav>
+    </aside>
+    
+    <div class="book-container">
+
+        <div class="book-open">
+            <div class="book-pages">
+                <div class="page-left">
+                    <div id="wonder-content-left"></div>
+                </div>
+                
+                <div class="page-right">
+                    <div id="wonder-content-right"></div>
+                </div>
+
+                <div class="page-navigation">
+                    <button class="nav-button" id="prev-btn">←</button>
+                    <button class="nav-button" id="next-btn">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/001.js"></script>
+    <script src="../js/book-details.js"></script>
+    <script src="../js/radio.js"></script>
+    <script src="../js/sidebar-navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Кнопка переключения темы */
+.theme-toggle {
+    position: fixed;
+    top: 7px;
+    width: 28px;
+    height: 28px;
+    transform: translateX(1470px);
+    border: none;
+    border-radius: 50%;
+    background: rgb(255, 255, 255 , 0.2);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateX(1450px);
+}
+
+.theme-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+
+
+/* вся светлая тема */
+body.light-theme {
+    background-color: #53433a;
+    margin: 0;
+    padding: 0;
+}
+
+body.light-theme .room {
+    background: #53433a;
+    transition: background 0.8s ease;
+}
+
+body.light-theme header {
+    background-color: #a5826a;
+    transition: background-color 0.5s ease;
+}
+
+body.light-theme header a {
+    color: #f5eee6;
+    transition: color 0.5s ease;
+}
+
+body.light-theme header a.active {
+    text-shadow: 0 0 8px #ffffff;
+}
+
+body.light-theme .stars {
+    display: none
+}
+
+.sky-l, .moon-l {
+    transition: opacity 0.5s ease;
+}
+
+.sky-l .sky,
+.moon-l .moon {
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+/* Скрываем ночтем */
+body.light-theme .sky-l .sky:not(.day),
+body.light-theme .moon-l .moon:not(.day), body.light-theme .window-wrapper .window:not(.day) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+/* Показываем светтем */
+body.light-theme .sky-l .sky-day,
+body.light-theme .moon-l .moon.day {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Скрываем светтем */
+body:not(.light-theme) .sky-l .sky-day,
+body:not(.light-theme) .moon-l .moon.day {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+body:not(.light-theme) .window-wrapper .windows-day {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+body.light-theme .window-wrapper .windows-day {
+    opacity: 1;
+}
+
+
+body.light-theme .window-wrapper .windows-day {
+    opacity: 1;
+    /* transition: opacity 0.5s ease; */
+}

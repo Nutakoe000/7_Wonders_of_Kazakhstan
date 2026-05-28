@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Wonders-of-Kazakhstan: home</title>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/003.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/radio.css">
+    <link rel="stylesheet" href="../css/listup.css">
+</head>
+<body>
+    <!-- Кнопка переключения темы -->
+    <button id="theme-toggle" class="theme-toggle">
+        <img id="theme-icon" class="theme-icon" src="images/lightOFF.png" alt="выключатель">
+    </button>
+
+    <header>
+        <nav>
+            <a class="active" href="index.html"> Главная </a>
+            <a href="list.html"> Чудо-Список </a>
+            <a href="detals.html"> Чудо-Информация </a>
+        </nav>
+        <button id="button-planer">
+            <img src="images/planer.png" alt="самолётик" class="planer"/>
+        </button>
+    </header>
+    <main>
+    </main>
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+            <h3> Все чудеса </h3>
+                <details>
+                    <summary> Аккум-Калкан </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Чарынский каньон </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Кольсайские озёра </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Озеро Каинды </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Урочище Бектау-Ата </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Шайтанколь </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+                <details>
+                    <summary> Урочие Босжира </summary>
+                    <li> Карта </li>
+                    <li> Краткое описание </li>
+                    <li> Подробности </li>
+                </details>
+            </ul>
+        </nav>
+    </aside>
+    <canvas></canvas>
+    
+    <section class="room">
+        <div class="window-wrapper">
+            <img src="images/window.png" class="window" alt="оконная рама">
+            
+            <div class="windows-cont">
+                <div class="parallax sky-l">
+                    <img src="images/sky01.png" class="sky" alt="небо">
+                    <div class="stars"></div>
+                </div>
+                <div class="parallax moon-l">
+                    <img src="images/moon.png" class="moon" alt="луна">
+                </div>
+                <div class="parallax clouds-l">
+                    <img src="images/cloud1.png" class="cloud cloud1" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud2" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud3" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud4" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud5" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud6" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud7" alt="облако">
+                    <img src="images/cloud1.png" class="cloud cloud8" alt="облако">
+                </div>
+                <div class="parallax tree-l">
+                    <img src="images/tree2.png" class="tree" alt="дерево">
+                </div>
+            </div>
+            
+            <div class="table-cont">
+                <div class="table-staff">
+                    <img src="images/book.png" class="book-png" alt="книга">
+                    <div class="booklink-cont">
+                    <a href="list.html" class="book-link"></a>
+                    </div>
+                <div class="radio-l">
+                    <img src="images/radio-new.png" class="radio" alt="радио">
+                    <button class="radio-btn play" > <!--<img src="images/toggleRADIOon.png" class="radio-btd-play" alt="кнопка радио играть трек">--></button> 
+                    <button class="radio-btn muz-list"><!--<img src="images/toggleRADIOlist.png" class="radio-btd-list" alt="кнопка радио переключить трек">--></button>
+                </div>
+                </div>
+                <img src="images/table.png" class="table" alt="стол">
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="js/001.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/radio.js"></script>
+    <script src="js/optimaze.js"></script>
+    <script src="js/sidebar-navigation.js"></script>
+
+</body>
+</html>

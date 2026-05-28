@@ -1,0 +1,204 @@
+.book-container {
+    width: 100vw;
+    height: 88vh;
+    background-image: url('../images/tabletexture2.jpg');
+    display: flex;
+    background-size: 100% 100%;
+    justify-content: center; /* книга посередине*/
+    align-items: center;
+    z-index: 1;
+    padding-top: 80px;
+}
+
+
+.book-open {
+    position: relative;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Страницы */
+.book-pages {
+    width: 310%;
+    display: flex;
+    background-image: url('../images/bookpage.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+
+.page-left {
+    width: 50%;
+    padding: 60px 40px;
+    border-right: 2px solid rgba(139, 69, 19, 0.3);
+    box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.page-right {
+    width: 50%;
+    padding: 60px 40px;
+    border-right: 2px solid rgba(139, 69, 19, 0.3);
+    box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.list-pageleft {
+    overflow-x: hidden;
+}
+
+/* Содержание */
+.contents-title {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #4a3728;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+
+.contents-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contents-list li {
+    margin: 20px 0;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+}
+
+.contents-list a {
+    color: #4a3728;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.contents-list a:hover {
+    border-left-color: #8b4513;
+    padding-left: 25px;
+    background: rgba(139, 69, 19, 0.05);
+}
+
+/* Детали чуда */
+.wonder-details {
+    font-family: 'Georgia', serif;
+    color: #4a3728;
+}
+
+.wonder-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #8b4513;
+}
+
+.wonder-section {
+    margin-bottom: 25px;
+}
+
+.wonder-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #654321;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+    padding-bottom: 5px;
+}
+
+.wonder-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.wonder-map {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #8b4513;
+    margin-top: 10px;
+}
+
+/* Навигация по страницам, кнопочки, все дела*/
+.page-navigation {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/bookpage.jpg');
+    background-size: cover;
+    border: 2px solid #8b4513;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #4a3728;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* элементы по умолчанию */
+.wonder-content {
+    display: none;
+}
+
+.wonder-content.active {
+    display: block;
+}
+
+/* махинации со скроллингом */
+.page-left::-webkit-scrollbar,
+.page-right::-webkit-scrollbar {
+    width: 8px;
+}
+
+.page-left::-webkit-scrollbar-track,
+.page-right::-webkit-scrollbar-track {
+    background: rgba(139, 69, 19, 0.1);
+}
+
+.page-left::-webkit-scrollbar-thumb,
+.page-right::-webkit-scrollbar-thumb {
+    background: rgba(139, 69, 19, 0.4);
+    border-radius: 4px;
+}
+
+.page-left::-webkit-scrollbar-thumb:hover,
+.page-right::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 69, 19, 0.6);
+}
+
+/* Стили для книги на столе в index.html */
+.table-staff .book {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.table-staff .book:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}

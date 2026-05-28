@@ -1,0 +1,74 @@
+@font-face {
+    font-family: titleB;
+    src: url(../fonts/Balsamiq_Sans/BalsamiqSans-Bold.ttf);
+}
+@font-face {
+    font-family: titleN;
+    src: url(../fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf);
+}
+
+
+@keyframes planer-fly {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    47% {
+        transform: translateY(4px) rotate(7deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+header {
+    position: fixed;
+    background-color: #040404;
+    height: 42px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+}
+
+a { /* махинации с текстом шапочной навигации */
+    text-decoration: none;
+    color: #ffffff;
+    font-family: titleB;
+    word-spacing: 13px;
+    position: relative;
+    left: 84px;
+    top: 11px;
+    font-size: 16px;
+}
+
+a.active {
+    text-shadow: 0 0 8px;
+    font-family: titleN;
+    font-size: 17px;
+}
+
+.planer { /* кнопкa боковой панели */
+    width: 43px;
+    top: 10px;
+    height: auto;
+    cursor: pointer;
+}
+
+button {
+    position: relative;
+    left: 5px;
+    bottom: 18px;
+    background: none;
+    border: none;
+}
+
+header nav a:hover {
+    color: #ffd700;
+    font-size: 17px;
+    word-spacing: 7px;
+    transition: color 0.2s ease , font-size 0.2s ease , word-spacing 0.2 ease;
+}
+
+header nav a.active:hover {
+    word-spacing: 13px;
+}

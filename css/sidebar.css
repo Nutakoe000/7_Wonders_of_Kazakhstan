@@ -1,0 +1,59 @@
+@keyframes sidebar-move2 {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-350px);
+    }
+}
+
+@keyframes sidebar-move {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-350px);
+    }
+}
+
+aside {
+    position: fixed;
+    background-color: #4c3e2c95;
+    background-size: auto;
+    top: 42px;
+    left: -400px;
+    transition: left 0.5s ease-in-out;
+    z-index: 20;
+}
+
+aside ul {
+    list-style: none;
+    margin-top: 0px;
+    position: relative;
+    right: 30px;
+    font-family: titleB;
+    color:#ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+aside li {
+    position: relative;
+    left: 35px;
+    margin-top: 2px;
+    font-family: titleN;
+    cursor: pointer;
+}
+
+aside details {
+    margin-top: 30px;
+}
+
+aside li:hover {
+    color: #ffd700;
+    transition: color 0.2s ease;
+}
+
+ .click-planer { /*класс на открывашку, выводит боковую панель влево */
+    left: 0px;
+}
