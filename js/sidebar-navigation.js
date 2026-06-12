@@ -105,7 +105,7 @@ function openMap(coordinates) {
 
 // Перейти на страницу с подробностями
 function goToDetails(wonderIndex) {
-    window.location.href = `detals.html?wonder=${wonderIndex}`;
+    window.location.href = `pages/detals.html?wonder=${wonderIndex}`;
 }
 
 // Инициализация навигации в сайдбаре
