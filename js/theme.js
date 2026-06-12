@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (!daySky) {
             daySky = document.createElement('img');
-            daySky.src = '../images/sky-day.jpg';
+            daySky.src = 'images/sky-day.jpg';
             daySky.className = 'sky-day';
             daySky.alt = 'дневное небо';
             skyContainer.appendChild(daySky);
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (!daySun) {
             daySun = document.createElement('img');
-            daySun.src = '../images/sun.png';
+            daySun.src = 'images/sun.png';
             daySun.className = 'moon day';
             daySun.alt = 'солнце';
             daySun.style.position = 'absolute';
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!dayWind) {
             dayWind = document.createElement('img');
-            dayWind.src = '../images/window_day.png';
+            dayWind.src = 'images/window_day.png';
             dayWind.className = 'windows-day';
             dayWind.alt = 'оконная рама днём';
             dayWind.style.position = 'absolute';
@@ -80,15 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function applyLightTheme() {
         body.classList.add('light-theme');
-        themeIcon.src = '../images/lightON.png';
+        themeIcon.src = 'images/lightON.png';
         const stars = document.querySelector('.stars');
-        if (stars) {
+        if (stars) {    
             stars.className = 'stars body.light-theme';
         }
     }
     
     function applyDarkTheme() {
         body.classList.remove('light-theme');
-        themeIcon.src = '../images/lightOFF.png';
+        themeIcon.src = 'images/lightOFF.png';
     }
 });
