@@ -24,16 +24,16 @@ window.addEventListener('scroll', () => {
     if (p >= 0 && p < 35) {
         w_conteiner.className = 'window-wrapper'; 
         tree.className = 'tree';
-        tree.src = '../images/tree2.png'
+        tree.src = 'images/tree2.png'
     }
     else if (p >= 35 && p < 70) {
         w_conteiner.className = 'window-wrapper medium'; 
         tree.className = 'tree medium';
-        tree.src = '../images/tree.png'
+        tree.src = 'images/tree.png'
     }
     else {
         w_conteiner.className = 'window-wrapper small'; 
         tree.className = 'tree small';
-        tree.src = '../images/tree3.png'
+        tree.src = 'images/tree3.png'
     }
 });
