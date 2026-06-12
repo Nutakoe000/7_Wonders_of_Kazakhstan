@@ -3,7 +3,7 @@ const tracks = [
     '../audio/Vera-Lynn-Well-Meet-Again.mp3',
     '../audio/youre-never-fully-dressed-without-a-smile.mp3',
     '../audio/But-I-Do-You-Know-I-Do.mp3',
-    '../audio/Player-Baby-Come-Back-PlayerVEVO.mp3'
+    '../audio/Player-Baby-Come-Back-PlayerVEVO.mp3',
 ];
 
 let currentTrack = 0;
