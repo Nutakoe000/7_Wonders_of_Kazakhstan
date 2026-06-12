@@ -2,7 +2,7 @@ const tracks = [
     '../audio/Ruth Etting (1930) [BODY AND SOUL].mp3',
     '../audio/Vera Lynn - We’ll Meet Again.mp3',
     '../audio/you’re never fully dressed without a smile.mp3',
-    '../audio/But I Do, You Know I Do!.mp3'
+    '../audio/But-I-Do-You-Know-I-Do.mp3'
 ];
 
 let currentTrack = 0;
